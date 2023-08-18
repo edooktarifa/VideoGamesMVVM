@@ -26,7 +26,6 @@ class SearchViewController: UIViewController {
 
         // Do any additional setup after loading the view.
         registerCollectionView()
-        collectionView.backgroundColor = .orange
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -53,7 +52,6 @@ extension SearchViewController: UICollectionViewDataSource, UICollectionViewDele
         if let urlImages = URL(string: listMovieSearch[indexPath.row].background_image ?? "") {
             cell.searchImg.downloaded(from: urlImages, contentMode: .scaleAspectFill)
         }
-        cell.backgroundColor = .lightGray
         
         return cell
     }
